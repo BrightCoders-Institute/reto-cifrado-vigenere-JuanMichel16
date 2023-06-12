@@ -13,14 +13,13 @@ class Clave
     end
 
     def igualar_longitud_mensaje(mensaje_numero)
-        puts "En igualar longitud"
         diferencia_de_caracteres = (mensaje_numero.length - self.cifrado.length)
         if(diferencia_de_caracteres >= 0)
             (0..diferencia_de_caracteres).each do |i| 
                 self.cifrado.push(self.cifrado[i])
             end
         end
-        puts "#{self.cifrado}"
+        return nil
     end
 
     private

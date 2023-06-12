@@ -10,10 +10,13 @@ class CifradoVinagere
     puts "#{clave.mostrar_cifrado.join("")}"
     clave.igualar_longitud_mensaje(mensaje.cifrado)
 
+    mensaje_cifrado = mensaje.cifrar_mensaje(clave.cifrado).join("")
+    puts "#{mensaje_cifrado}"
+
   end
 end
 
-nuevo_cifrado = CifradoVinagere.new.iniciar_cifrado("coco", "asss")
+nuevo_cifrado = CifradoVinagere.new.iniciar_cifrado("Hola", "Secreto")
 
 
 
